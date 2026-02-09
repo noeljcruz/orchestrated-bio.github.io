@@ -1,41 +1,35 @@
 #!/usr/bin/env bash
-# Deploy orchestrated.bio to Cloudflare Pages
+# Deploy orchestrated.bio via GitHub Pages
 # Usage: ./scripts/deploy.sh
 #
-# Prerequisites:
-#   1. npm install -g wrangler  (or npx wrangler)
-#   2. wrangler login           (authenticate with Cloudflare)
+# This site is deployed automatically by GitHub Pages from the /docs
+# directory on the main branch. Simply push to main and the site updates.
 #
-# First-time setup:
-#   1. Run: wrangler pages project create orchestrated-bio
-#   2. Add custom domain in Cloudflare Pages dashboard:
-#      - Go to: dash.cloudflare.com > Pages > orchestrated-bio > Custom domains
-#      - Add: orchestrated.bio
-#      - Add: www.orchestrated.bio
-#   3. Update DNS at Porkbun (Option A - recommended):
-#      - Change nameservers to Cloudflare's (shown in dashboard)
-#      OR (Option B - CNAME only):
-#      - Add CNAME: orchestrated.bio -> orchestrated-bio.pages.dev
-#      - Add CNAME: www -> orchestrated-bio.pages.dev
+# First-time DNS setup at Porkbun:
+#   1. Add A records for orchestrated.bio pointing to GitHub Pages:
+#      185.199.108.153
+#      185.199.109.153
+#      185.199.110.153
+#      185.199.111.153
+#   2. Add CNAME record: www -> alexvnesta.github.io
+#   3. In GitHub repo Settings > Pages:
+#      - Source: Deploy from a branch
+#      - Branch: main, /docs
+#      - Custom domain: orchestrated.bio
+#      - Enforce HTTPS: checked
+#
+# After DNS propagates (up to 24h, usually minutes), the site
+# will be live at https://orchestrated.bio
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-SITE_DIR="$PROJECT_DIR/site"
-PROJECT_NAME="orchestrated-bio"
-
-echo "Deploying orchestrated.bio to Cloudflare Pages..."
-echo "Source directory: $SITE_DIR"
+echo "Deploying orchestrated.bio..."
 echo ""
 
-# Deploy
-npx wrangler pages deploy "$SITE_DIR" \
-    --project-name="$PROJECT_NAME" \
-    --branch=main \
-    --commit-dirty=true
+# Just push to main — GitHub Pages auto-deploys from /docs
+git push origin main
 
 echo ""
-echo "Deploy complete!"
+echo "Push complete! GitHub Pages will deploy automatically."
 echo "Site: https://orchestrated.bio"
-echo "Preview: https://orchestrated-bio.pages.dev"
+echo "GitHub Pages: https://alexvnesta.github.io/orchestrated-bio"

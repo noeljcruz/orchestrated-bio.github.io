@@ -1,5 +1,0 @@
-# Cloudflare Pages configuration for orchestrated.bio
-# Deploy with: npx wrangler pages deploy site --project-name=orchestrated-bio
-name = "orchestrated-bio"
-pages_build_output_dir = "site"
-compatibility_date = "2025-01-01"
