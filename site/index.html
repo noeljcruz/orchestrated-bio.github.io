@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestrated Biosciences | AI-Driven Precision Medicine</title>
+    <meta name="description" content="Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine and drug discovery.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#edfcf5',
+                            100: '#d3f8e6',
+                            200: '#aaf0d1',
+                            300: '#73e2b7',
+                            400: '#3acc98',
+                            500: '#16b17e',
+                            600: '#0a8f65',
+                            700: '#087253',
+                            800: '#095a43',
+                            900: '#084a38',
+                            950: '#032920',
+                        },
+                        navy: {
+                            50: '#f0f4fd',
+                            100: '#e4ebfb',
+                            200: '#cedaf6',
+                            300: '#b0c0ef',
+                            400: '#919ee6',
+                            500: '#7a81db',
+                            600: '#6462cc',
+                            700: '#5652b3',
+                            800: '#474591',
+                            900: '#1a1f3d',
+                            950: '#0d1020',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #16b17e, #3acc98, #7a81db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero background pattern */
+        .hero-bg {
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(22, 177, 126, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(122, 129, 219, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(58, 204, 152, 0.05) 0%, transparent 50%);
+        }
+
+        /* DNA helix decorative element */
+        .dna-strand {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(22, 177, 126, 0.2) 20%,
+                rgba(122, 129, 219, 0.2) 50%,
+                rgba(22, 177, 126, 0.2) 80%,
+                transparent 100%
+            );
+        }
+
+        /* Card hover effects */
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(22, 177, 126, 0.3), rgba(122, 129, 219, 0.3), transparent);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d1020; }
+        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #087253; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-sm group-hover:shadow-lg group-hover:shadow-brand-500/20 transition-shadow">
+                        OB
+                    </div>
+                    <span class="text-lg font-semibold text-white hidden sm:block">
+                        Orchestrated<span class="text-brand-400">.bio</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">About</a>
+                    <a href="#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Products</a>
+                    <a href="#team" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Team</a>
+                    <a href="#contact" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Contact</a>
+                    <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">
+                        Get in Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#about" class="block text-sm text-gray-400 hover:text-brand-400 py-2">About</a>
+                <a href="#products" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Products</a>
+                <a href="#team" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Team</a>
+                <a href="#contact" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center hero-bg overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-600/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+            <!-- Grid pattern -->
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+                        AI-Powered Bioscience Solutions
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                        Orchestrating the Future of
+                        <span class="gradient-text">Precision Medicine</span>
+                    </h1>
+
+                    <p class="text-lg text-gray-400 max-w-xl leading-relaxed">
+                        We combine agentic AI systems with deep biomedical expertise to accelerate
+                        drug discovery, biomarker identification, and clinical decision-making.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                            Explore Our Products
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <a href="#about" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Stats bar -->
+                    <div class="flex gap-8 pt-4">
+                        <div>
+                            <div class="text-2xl font-bold text-white">AI + Bio</div>
+                            <div class="text-xs text-gray-500 mt-1">Convergence</div>
+                        </div>
+                        <div class="w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-2xl font-bold text-white">PhD-Led</div>
+                            <div class="text-xs text-gray-500 mt-1">Research Team</div>
+                        </div>
+                        <div class="w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-2xl font-bold text-white">Agentic</div>
+                            <div class="text-xs text-gray-500 mt-1">AI Systems</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero visual -->
+                <div class="hidden lg:flex items-center justify-center relative">
+                    <div class="relative w-96 h-96">
+                        <!-- Abstract molecule/network visualization -->
+                        <svg viewBox="0 0 400 400" class="w-full h-full animate-float" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Connection lines -->
+                            <line x1="200" y1="100" x2="300" y2="180" stroke="rgba(22,177,126,0.3)" stroke-width="1.5"/>
+                            <line x1="200" y1="100" x2="120" y2="200" stroke="rgba(122,129,219,0.3)" stroke-width="1.5"/>
+                            <line x1="300" y1="180" x2="280" y2="300" stroke="rgba(22,177,126,0.2)" stroke-width="1.5"/>
+                            <line x1="120" y1="200" x2="180" y2="320" stroke="rgba(122,129,219,0.2)" stroke-width="1.5"/>
+                            <line x1="280" y1="300" x2="180" y2="320" stroke="rgba(22,177,126,0.15)" stroke-width="1.5"/>
+                            <line x1="120" y1="200" x2="300" y2="180" stroke="rgba(58,204,152,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+                            <line x1="200" y1="100" x2="180" y2="320" stroke="rgba(58,204,152,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+
+                            <!-- Nodes -->
+                            <circle cx="200" cy="100" r="12" fill="rgba(22,177,126,0.8)" class="animate-pulse-slow"/>
+                            <circle cx="200" cy="100" r="20" fill="none" stroke="rgba(22,177,126,0.2)" stroke-width="1"/>
+
+                            <circle cx="300" cy="180" r="8" fill="rgba(122,129,219,0.8)"/>
+                            <circle cx="300" cy="180" r="14" fill="none" stroke="rgba(122,129,219,0.2)" stroke-width="1"/>
+
+                            <circle cx="120" cy="200" r="10" fill="rgba(58,204,152,0.8)"/>
+                            <circle cx="120" cy="200" r="16" fill="none" stroke="rgba(58,204,152,0.2)" stroke-width="1"/>
+
+                            <circle cx="280" cy="300" r="7" fill="rgba(22,177,126,0.6)"/>
+                            <circle cx="280" cy="300" r="12" fill="none" stroke="rgba(22,177,126,0.15)" stroke-width="1"/>
+
+                            <circle cx="180" cy="320" r="9" fill="rgba(122,129,219,0.6)"/>
+                            <circle cx="180" cy="320" r="15" fill="none" stroke="rgba(122,129,219,0.15)" stroke-width="1"/>
+
+                            <!-- Small floating particles -->
+                            <circle cx="250" cy="140" r="2" fill="rgba(22,177,126,0.4)" class="animate-pulse-slow"/>
+                            <circle cx="160" cy="160" r="2" fill="rgba(122,129,219,0.4)" class="animate-pulse-slow" style="animation-delay:1s"/>
+                            <circle cx="230" cy="250" r="2" fill="rgba(58,204,152,0.4)" class="animate-pulse-slow" style="animation-delay:2s"/>
+                            <circle cx="150" cy="270" r="1.5" fill="rgba(22,177,126,0.3)"/>
+                            <circle cx="320" cy="240" r="1.5" fill="rgba(122,129,219,0.3)"/>
+                        </svg>
+
+                        <!-- Glow behind -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-navy-600/10 rounded-full blur-3xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    About Us
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Where Biology Meets <span class="gradient-text">Intelligent Automation</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Orchestrated Biosciences was founded on a simple premise: the most impactful
+                    breakthroughs in medicine happen at the intersection of deep biological knowledge
+                    and cutting-edge AI. We build agentic systems that don't just analyze data &mdash;
+                    they reason, plan, and execute complex biomedical workflows autonomously.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="group p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Biomedical Expertise</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        PhD-level understanding of molecular biology, cancer genomics, and precision medicine &mdash;
+                        ensuring our AI solutions are grounded in real science.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="group p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Agentic AI Systems</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        We build autonomous AI agents that can reason through complex biological problems,
+                        orchestrate multi-step analyses, and deliver actionable insights.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="group p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Strategic Execution</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Military-grade project management discipline combined with MBA-level business strategy
+                        ensures our solutions ship on time and create real value.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Product Portfolio
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Solutions That <span class="gradient-text">Accelerate Discovery</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Our product suite spans the biomedical pipeline &mdash; from target identification
+                    to clinical decision support.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product 1: Insight -->
+                <div class="product-card group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-500/5 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-700/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium">Flagship</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Insight</h3>
+                        <p class="text-brand-400 text-xs font-medium mb-3">Conversational Cancer Genomics Intelligence</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Ask questions about TCGA cancer data in plain English and get instant,
+                            publication-quality visualizations with AI-generated analysis. From question
+                            to chart in a single sentence &mdash; no SQL, no portal configuration.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">TCGA Data</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">11 Cancer Types</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Mouse Selector -->
+                <div class="product-card group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-navy-600/5 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-500/20 to-navy-700/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-navy-500/10 text-navy-400 text-xs font-medium">Research Tool</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Mouse Selector</h3>
+                        <p class="text-navy-400 text-xs font-medium mb-3">Intelligent JAX Mouse Model Search</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Find the right transgenic mouse model with natural language queries.
+                            Search "tau pathology Alzheimer's model" instead of fighting keyword search.
+                            AI-powered ranking, match explanations, and proactive warnings about
+                            genetic backgrounds and availability.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-400 text-xs">JAX Database</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-400 text-xs">NLP Search</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-400 text-xs">Smart Ranking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Spatial -->
+                <div class="product-card group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-500/5 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-navy-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-medium">Agentic AI</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Spatial Advisor</h3>
+                        <p class="text-brand-300 text-xs font-medium mb-3">Agentic Spatial Transcriptomics Workflow</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            An AI agent that guides you through spatial transcriptomics analysis.
+                            It profiles your data, recommends methods tailored to your specific characteristics,
+                            executes analysis steps, and auto-adapts when results look problematic.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-300 text-xs">Scanpy</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-300 text-xs">Squidpy</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-300 text-xs">Adaptive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Biomedical AI Radar -->
+                <div class="product-card group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-navy-600/5 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-500/20 to-brand-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-navy-500/10 text-navy-300 text-xs font-medium">Intelligence</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">AI Radar</h3>
+                        <p class="text-navy-300 text-xs font-medium mb-3">Competitive Intelligence Automation</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Automated landscape scanner monitoring 7 sources &mdash; arXiv, bioRxiv, Semantic Scholar,
+                            Hugging Face, GitHub, and more. AI-scored findings with weekly strategic analysis
+                            of competitors, technologies, and market signals.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-300 text-xs">7 Sources</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-300 text-xs">Auto-Scoring</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-500/10 text-navy-300 text-xs">Strategic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform: cBioPortal -->
+                <div class="product-card group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-500/5 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600/20 to-brand-400/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
+                                </svg>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium">Platform</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Genomics Portal</h3>
+                        <p class="text-brand-400 text-xs font-medium mb-3">Containerized Cancer Genomics Infrastructure</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Production-ready cBioPortal deployment with one-command setup. Pre-loaded cancer studies,
+                            flexible data import pipelines, and reference genome support for rapid
+                            genomics exploration and demonstration.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">cBioPortal</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Docker</span>
+                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">hg19/hg38</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Solutions CTA -->
+                <div class="product-card group relative p-8 rounded-2xl bg-gradient-to-br from-brand-900/30 to-navy-900/50 border border-brand-500/10 hover:border-brand-500/30 overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-500/10 to-transparent rounded-bl-full"></div>
+                    <div class="relative">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/30 to-navy-500/30 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
+                        <p class="text-brand-300 text-xs font-medium mb-3">Tailored AI for Your Research</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Need something specific? We design and build bespoke agentic AI solutions
+                            tailored to your unique biomedical challenges, data sources, and workflows.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center gap-2 text-brand-400 text-sm font-medium hover:text-brand-300 transition-colors">
+                            Let's Talk
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Our Team
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Built by <span class="gradient-text">Scientists & Engineers</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Our founding team brings together deep biomedical research, agentic AI development,
+                    military-grade discipline, and strategic business execution.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Alex -->
+                <div class="group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Avatar placeholder -->
+                        <div class="w-28 h-28 rounded-full bg-gradient-to-br from-brand-500/30 to-brand-700/30 flex items-center justify-center mb-6 ring-2 ring-brand-500/10 group-hover:ring-brand-500/30 transition-all">
+                            <span class="text-3xl font-bold text-brand-300">AN</span>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-1">Alex Nesta, PhD</h3>
+                        <p class="text-brand-400 text-sm font-medium mb-4">Co-Founder & Chief Technology Officer</p>
+
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Data scientist with a PhD in Biomedical Sciences from UConn Health Center.
+                            Expert in cancer genomics, long-read RNA sequencing, and machine learning.
+                            Leads development of agentic AI systems for precision medicine applications.
+                            Published researcher with work spanning isoform sequencing, mutation analysis,
+                            and biomarker-driven clinical trials.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Agentic AI</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Cancer Genomics</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Machine Learning</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">RNA-seq</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Python/R</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://www.linkedin.com/in/alex-v-nesta-phd-847547a5/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noel -->
+                <div class="group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Avatar placeholder -->
+                        <div class="w-28 h-28 rounded-full bg-gradient-to-br from-navy-500/30 to-navy-700/30 flex items-center justify-center mb-6 ring-2 ring-navy-500/10 group-hover:ring-brand-500/30 transition-all">
+                            <span class="text-3xl font-bold text-navy-300">NC</span>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-1">Noel Cruz, MBA</h3>
+                        <p class="text-brand-400 text-sm font-medium mb-4">Co-Founder & Chief Operating Officer</p>
+
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            U.S. Coast Guard veteran and software engineer with an MBA and Stanford ML certification.
+                            Former roles at Activision Blizzard, L3Harris Technologies, and Microsoft.
+                            Combines military leadership, technical depth, and business acumen to drive
+                            operational excellence and strategic execution across all company initiatives.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Project Management</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Software Engineering</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Machine Learning</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Military Leadership</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Strategy</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a href="https://www.linkedin.com/in/noeljcruz/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                        Get in Touch
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                        Let's <span class="gradient-text">Start a Conversation</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Whether you're exploring AI for your biomedical research or ready to build,
+                        we'd love to hear from you.
+                    </p>
+                </div>
+
+                <form id="contact-form" class="space-y-6" action="#" method="POST">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-xl bg-navy-900/50 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 focus:outline-none transition-all"
+                                placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-xl bg-navy-900/50 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 focus:outline-none transition-all"
+                                placeholder="you@company.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                        <select id="subject" name="subject"
+                            class="w-full px-4 py-3 rounded-xl bg-navy-900/50 border border-white/10 text-white focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 focus:outline-none transition-all">
+                            <option value="" class="bg-navy-900">Select a topic...</option>
+                            <option value="products" class="bg-navy-900">Product Inquiry</option>
+                            <option value="partnership" class="bg-navy-900">Partnership Opportunity</option>
+                            <option value="consulting" class="bg-navy-900">Custom Solution / Consulting</option>
+                            <option value="careers" class="bg-navy-900">Careers</option>
+                            <option value="other" class="bg-navy-900">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-3 rounded-xl bg-navy-900/50 border border-white/10 text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 focus:outline-none transition-all resize-none"
+                            placeholder="Tell us about your project or question..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                        Send Message
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-xs">
+                            OB
+                        </div>
+                        <span class="text-lg font-semibold text-white">
+                            Orchestrated<span class="text-brand-400">.bio</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+                        AI-driven precision medicine solutions. Combining biomedical expertise with
+                        agentic AI to accelerate discovery.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">About</a></li>
+                        <li><a href="#products" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Products</a></li>
+                        <li><a href="#team" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Team</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="mailto:info@orchestrated.bio" class="text-sm text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                                info@orchestrated.bio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/orchestrated-biosciences" target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-600">&copy; 2025 Orchestrated Biosciences. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
