@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orchestrated Biosciences | AI-Driven Precision Medicine</title>
     <meta name="description" content="Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine and drug discovery.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orchestrated.bio/">
+    <meta property="og:title" content="Orchestrated Biosciences | AI-Driven Precision Medicine">
+    <meta property="og:description" content="Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine and drug discovery.">
+    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orchestrated Biosciences | AI-Driven Precision Medicine">
+    <meta name="twitter:description" content="Agentic AI systems for cancer genomics, drug discovery, and precision medicine.">
+    <meta name="twitter:image" content="https://orchestrated.bio/images/og-image.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -124,9 +135,7 @@
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-sm group-hover:shadow-lg group-hover:shadow-brand-500/20 transition-shadow">
-                        OB
-                    </div>
+                    <img src="images/favicon.svg" alt="OB" class="w-9 h-9 rounded-lg group-hover:shadow-lg group-hover:shadow-brand-500/20 transition-shadow">
                     <span class="text-lg font-semibold text-white hidden sm:block">
                         Orchestrated<span class="text-brand-400">.bio</span>
                     </span>
@@ -136,10 +145,11 @@
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#about" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">About</a>
                     <a href="#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Products</a>
+                    <a href="#research" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Research</a>
                     <a href="#team" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Team</a>
                     <a href="#contact" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Contact</a>
-                    <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">
-                        Get in Touch
+                    <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">
+                        Try Insight&trade;
                     </a>
                 </div>
 
@@ -157,8 +167,10 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="#about" class="block text-sm text-gray-400 hover:text-brand-400 py-2">About</a>
                 <a href="#products" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Products</a>
+                <a href="#research" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Research</a>
                 <a href="#team" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Team</a>
                 <a href="#contact" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Contact</a>
+                <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="block text-sm text-brand-400 font-medium py-2">Try Insight&trade;</a>
             </div>
         </div>
     </nav>
@@ -329,6 +341,76 @@
                         Military-grade project management discipline combined with MBA-level business strategy
                         ensures our solutions ship on time and create real value.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Our Differentiators
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Why <span class="gradient-text">Orchestrated Biosciences</span>?
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    We don't just apply AI to biology &mdash; we build from the biology up,
+                    ensuring every tool we create is grounded in real science and real clinical need.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex gap-5 p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Science-First AI</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">PhD-designed systems that understand biological context, not just pattern matching on data. Our tools are built by researchers who've published in the field.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Agentic, Not Static</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Our AI doesn't just respond &mdash; it reasons, plans, and executes multi-step workflows autonomously. True agentic intelligence for complex biological problems.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Rapid Deployment</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Military-precision project management means our solutions ship on schedule. From concept to deployed MVP in weeks, not months.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-2">Real-World Data</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Built on authoritative datasets like TCGA, GTEx, and JAX &mdash; not toy benchmarks. Our platforms work with the data researchers actually use.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -525,6 +607,106 @@
 
     <div class="section-divider max-w-5xl mx-auto"></div>
 
+    <!-- Insight Demo Section -->
+    <section id="insight-demo" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Featured Product
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Insight&trade; &mdash; <span class="gradient-text">Cancer Genomics in Plain English</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Ask questions about TCGA cancer data in natural language and get instant, publication-quality
+                    visualizations with AI-generated analysis. Patent pending.
+                </p>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto">
+                <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-500/5">
+                    <img src="images/insight-demo.png" alt="Insight cancer genomics platform showing conversational AI interface with example queries and featured investigations" class="w-full" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                            Launch Insight&trade;
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Decorative glow -->
+                <div class="absolute -inset-4 bg-gradient-to-r from-brand-500/5 via-brand-400/10 to-navy-500/5 rounded-3xl blur-2xl -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
+    <!-- Research / Publications Section -->
+    <section id="research" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Publications
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Grounded in <span class="gradient-text">Peer-Reviewed Research</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Our work is built on a foundation of published scientific research in cancer genomics,
+                    RNA biology, and computational bioinformatics.
+                </p>
+            </div>
+
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <!-- Paper 1 -->
+                <div class="group p-6 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-1 group-hover:text-brand-400 transition-colors">Alternative splicing of transposable elements in human breast cancer</h3>
+                            <p class="text-gray-500 text-sm mb-2">Nesta A, Veiga DFT, Banchereau J, Anczukow O, Beck CR</p>
+                            <p class="text-gray-500 text-xs mb-3"><em>Mobile DNA</em>. 2025;16(1):6. PMID: 39987084</p>
+                            <a href="https://doi.org/10.1186/s13100-025-00341-4" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-brand-400 text-xs font-medium hover:text-brand-300 transition-colors">
+                                View Paper
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="group p-6 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mt-1">
+                            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-1 group-hover:text-brand-400 transition-colors">A comprehensive long-read isoform analysis platform and sequencing resource for breast cancer</h3>
+                            <p class="text-gray-500 text-sm mb-2">Veiga DFT, Nesta A, Zhao Y, et al.</p>
+                            <p class="text-gray-500 text-xs mb-3"><em>Science Advances</em>. 2022;8(3):eabg6711. PMID: 35044822</p>
+                            <a href="https://doi.org/10.1126/sciadv.abg6711" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-brand-400 text-xs font-medium hover:text-brand-300 transition-colors">
+                                View Paper
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-5xl mx-auto"></div>
+
     <!-- Team Section -->
     <section id="team" class="py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -645,7 +827,7 @@
                     </p>
                 </div>
 
-                <form id="contact-form" class="space-y-6" action="#" method="POST">
+                <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xpwzgkrq" method="POST">
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
@@ -700,9 +882,7 @@
                 <!-- Brand -->
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-xs">
-                            OB
-                        </div>
+                        <img src="images/favicon.svg" alt="OB" class="w-8 h-8 rounded-lg">
                         <span class="text-lg font-semibold text-white">
                             Orchestrated<span class="text-brand-400">.bio</span>
                         </span>
@@ -719,8 +899,10 @@
                     <ul class="space-y-2">
                         <li><a href="#about" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">About</a></li>
                         <li><a href="#products" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Products</a></li>
+                        <li><a href="#research" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Research</a></li>
                         <li><a href="#team" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Team</a></li>
                         <li><a href="#contact" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Contact</a></li>
+                        <li><a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Insight&trade;</a></li>
                     </ul>
                 </div>
 
@@ -760,8 +942,8 @@
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
                     <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
                     <div class="flex gap-6">
-                        <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+                        <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
                     </div>
                 </div>
                 <p class="text-xs text-gray-700 text-center">
