@@ -19,6 +19,19 @@
     <meta name="twitter:title" content="Orchestrated Biosciences | AI-Driven Precision Medicine & Agentic AI Solutions">
     <meta name="twitter:description" content="Agentic AI systems for cancer genomics, drug discovery, precision medicine, and government applications.">
     <meta name="twitter:image" content="https://orchestrated.bio/images/og-image.png">
+    <link rel="canonical" href="https://orchestrated.bio/">
+
+    <!-- Google Analytics 4 — Replace G-XXXXXXXXXX with your real Measurement ID -->
+    <!-- To set up: https://analytics.google.com → Create property → Get Measurement ID -->
+    <!-- Alternative: Plausible (privacy-first, no cookies): <script defer data-domain="orchestrated.bio" src="https://plausible.io/js/script.js"></script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -128,6 +141,63 @@
         ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #087253; }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Orchestrated Biosciences",
+        "alternateName": "Orchestrated.bio",
+        "url": "https://orchestrated.bio",
+        "logo": "https://orchestrated.bio/images/logo-icon.png",
+        "description": "Agentic AI for precision medicine, biomedical research, and government missions. Built by scientists and veterans.",
+        "foundingDate": "2025",
+        "founders": [
+            {
+                "@type": "Person",
+                "name": "Alex Nesta, PhD",
+                "jobTitle": "Co-Founder & Chief Technology Officer",
+                "url": "https://www.linkedin.com/in/alex-v-nesta-phd-847547a5/"
+            },
+            {
+                "@type": "Person",
+                "name": "Noel Cruz, MBA",
+                "jobTitle": "Co-Founder & Chief Operating Officer",
+                "url": "https://www.linkedin.com/in/noeljcruz/"
+            }
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@orchestrated.bio",
+            "contactType": "sales"
+        },
+        "sameAs": [
+            "https://github.com/alexvnesta",
+            "https://github.com/noeljcruz"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Insight",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "url": "https://insight.orchestrated.bio",
+        "description": "Conversational cancer genomics intelligence platform. Ask questions about TCGA cancer data in plain English and get instant, publication-quality visualizations.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Orchestrated Biosciences"
+        }
+    }
+    </script>
 </head>
 <body class="bg-navy-950 text-gray-200 font-sans antialiased">
 
@@ -202,38 +272,47 @@
 
                     <p class="text-lg text-gray-400 max-w-xl leading-relaxed">
                         Bioinformatics consulting costs &gt;$200/hr and analyses take days.
-                        Our agentic AI delivers comparable results in minutes &mdash; a force multiplier
-                        for experts and a democratizer for every scientist who has more questions
-                        than time for analysis.
+                        Our agentic AI delivers comparable results in minutes.
+                    </p>
+                    <p class="text-xl font-semibold text-white/90 max-w-xl leading-relaxed border-l-2 border-brand-500/50 pl-4">
+                        A force multiplier for experts. A democratizer for everyone else.
                     </p>
 
                     <div class="flex flex-wrap gap-4">
-                        <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                        <a href="mailto:alex@orchestrated.bio?subject=Demo%20Request%20%E2%80%93%20Orchestrated%20Biosciences" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                            Schedule a Demo
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </a>
+                        <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
                             Explore Our Portfolio
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                         </a>
-                        <a href="#about" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
-                            Learn More
-                        </a>
                     </div>
 
                     <!-- Stats bar -->
-                    <div class="flex gap-8 pt-4">
+                    <div class="flex flex-wrap gap-8 pt-4">
                         <div>
-                            <div class="text-2xl font-bold text-white">AI + Bio</div>
-                            <div class="text-xs text-gray-500 mt-1">Convergence</div>
+                            <div class="text-2xl font-bold text-white">5</div>
+                            <div class="text-xs text-gray-500 mt-1">AI Products</div>
                         </div>
                         <div class="w-px bg-white/10"></div>
                         <div>
-                            <div class="text-2xl font-bold text-white">PhD-Led</div>
-                            <div class="text-xs text-gray-500 mt-1">Research Team</div>
+                            <div class="text-2xl font-bold text-white">11</div>
+                            <div class="text-xs text-gray-500 mt-1">Cancer Types</div>
                         </div>
                         <div class="w-px bg-white/10"></div>
                         <div>
-                            <div class="text-2xl font-bold text-white">Agentic</div>
-                            <div class="text-xs text-gray-500 mt-1">AI Systems</div>
+                            <div class="text-2xl font-bold text-brand-400 text-sm font-medium mt-1">Patent Pending</div>
+                            <div class="text-xs text-gray-500 mt-1">Insight&trade;</div>
+                        </div>
+                        <div class="w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-2xl font-bold text-white">10+</div>
+                            <div class="text-xs text-gray-500 mt-1">Years Combined R&amp;D</div>
                         </div>
                     </div>
                 </div>
@@ -343,15 +422,39 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Mission-Ready Execution</h3>
-                    <p class="text-gray-400 leading-relaxed">
+                    <p class="text-gray-400 leading-relaxed mb-3">
                         USCG veteran leadership, defense industry experience (L3Harris, Microsoft), and
                         deep connections across the government contracting ecosystem &mdash; from DOD to NASA.
                         We deliver with military-grade discipline.
                     </p>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                        Veteran Co-Founded
+                    </span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Social Proof -->
+    <div class="py-16 bg-navy-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500 mb-8 tracking-wide uppercase">Our founders have served teams at</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-6">
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">The Jackson Laboratory</span>
+                <span class="text-gray-600 hidden sm:inline">|</span>
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">UConn Health</span>
+                <span class="text-gray-600 hidden sm:inline">|</span>
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">AstraZeneca</span>
+                <span class="text-gray-600 hidden sm:inline">|</span>
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">L3Harris</span>
+                <span class="text-gray-600 hidden sm:inline">|</span>
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">Microsoft</span>
+                <span class="text-gray-600 hidden sm:inline">|</span>
+                <span class="text-gray-500 hover:text-gray-300 transition-colors text-lg font-semibold tracking-tight">U.S. Coast Guard</span>
+            </div>
+        </div>
+    </div>
 
     <div class="section-divider max-w-5xl mx-auto"></div>
 
@@ -380,7 +483,12 @@
                     </div>
                     <div>
                         <h3 class="text-white font-semibold mb-2">Local-First &amp; Data Sovereign</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Pharma can't send proprietary data to cloud APIs. Government agencies have sovereignty requirements. Academic institutions have IRB concerns. Our tools deploy locally &mdash; your data never leaves your environment.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-3">Pharma can't send proprietary data to cloud APIs. Government agencies have sovereignty requirements. Academic institutions have IRB concerns. Our tools deploy locally &mdash; your data never leaves your environment.</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded bg-navy-800/80 text-gray-500 text-[10px] font-medium">HIPAA-aware</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-800/80 text-gray-500 text-[10px] font-medium">Air-gap compatible</span>
+                            <span class="px-2 py-0.5 rounded bg-navy-800/80 text-gray-500 text-[10px] font-medium">On-prem / VPC</span>
+                        </div>
                     </div>
                 </div>
 
@@ -712,6 +820,25 @@
             </div>
         </div>
     </section>
+
+    <!-- Mid-page CTA -->
+    <div class="py-16 bg-gradient-to-r from-brand-950/50 via-navy-900/30 to-brand-950/50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Ready to see what agentic AI can do for your team?</h3>
+            <p class="text-gray-400 mb-6">Whether you're in research, pharma, or government &mdash; we'll show you a working demo tailored to your use case.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:alex@orchestrated.bio?subject=Demo%20Request%20%E2%80%93%20Orchestrated%20Biosciences" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                    Schedule a Demo
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </a>
+                <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                    Try Insight&trade; Now
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="section-divider max-w-5xl mx-auto"></div>
 
