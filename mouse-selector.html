@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Selector | Orchestrated Biosciences</title>
+    <meta name="description" content="Mouse Selector — intelligent JAX mouse model search with natural language queries, AI-powered ranking, and proactive warnings. Built by Orchestrated Biosciences.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo-icon.png">
+    <link rel="apple-touch-icon" href="images/logo-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orchestrated.bio/mouse-selector.html">
+    <meta property="og:title" content="Mouse Selector | Orchestrated Biosciences">
+    <meta property="og:description" content="Find the right transgenic mouse model with natural language queries. AI-powered ranking, match explanations, and proactive warnings.">
+    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://orchestrated.bio/mouse-selector.html">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QR515CQLLQ');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#edfcf5', 100: '#d3f8e6', 200: '#aaf0d1', 300: '#73e2b7',
+                            400: '#3acc98', 500: '#16b17e', 600: '#0a8f65', 700: '#087253',
+                            800: '#095a43', 900: '#084a38', 950: '#032920',
+                        },
+                        navy: {
+                            50: '#f0f4fd', 100: '#e4ebfb', 200: '#cedaf6', 300: '#b0c0ef',
+                            400: '#919ee6', 500: '#7a81db', 600: '#6462cc', 700: '#5652b3',
+                            800: '#474591', 900: '#1a1f3d', 950: '#0d1020',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .gradient-text {
+            background: linear-gradient(135deg, #919ee6, #7a81db, #b0c0ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d1020; }
+        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #087253; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
+                <span class="text-lg font-semibold text-white">Orchestrated<span class="text-brand-400">.bio</span></span>
+            </a>
+            <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-navy-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-400/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-500/20 to-navy-700/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                    </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-navy-500/10 text-navy-400 text-xs font-medium">Research Tool</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Mouse <span class="gradient-text">Selector</span>
+            </h1>
+            <p class="text-navy-400 text-lg font-medium mb-4">Intelligent JAX Mouse Model Search</p>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+                Find the right transgenic mouse model with natural language queries. Describe your research
+                question &mdash; the disease model, genetic background, or phenotype you need &mdash; and Mouse Selector
+                searches the entire JAX database, ranks results by relevance, explains why each model matches,
+                and proactively warns about common pitfalls like strain background effects or discontinued lines.
+            </p>
+
+            <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-navy-500/10 max-w-3xl">
+                <img src="images/mouse-selector-demo.gif" alt="Mouse Selector demo — searching for tau pathology Alzheimer's models with AI-ranked JAX results" class="w-full" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Natural Language Search</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Describe your research needs in plain English. No need to know exact strain names, stock numbers, or JAX nomenclature &mdash; the AI understands your intent.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">AI-Powered Ranking</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Results ranked by scientific relevance to your query, not just keyword matches. Each result includes an AI-generated explanation of why the model fits your needs.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Proactive Warnings</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Automatically flags potential issues like strain background effects, discontinued lines, breeding complications, or known phenotypic variability before you order.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Direct JAX Links</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Every result links directly to the JAX strain page with stock number, genotype, and availability. Go from query to order in minutes, not hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-400 text-sm font-bold flex items-center justify-center mb-4">1</div>
+                    <h3 class="text-white font-semibold mb-2">Describe Your Need</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Type a natural language query like "tau pathology model for Alzheimer's on C57BL/6 background" or "conditional knockout for breast cancer metastasis studies."</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-400 text-sm font-bold flex items-center justify-center mb-4">2</div>
+                    <h3 class="text-white font-semibold mb-2">AI Searches &amp; Ranks</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">The AI agent queries the JAX mouse database, evaluates each strain against your research context, and returns ranked results with match explanations.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-400 text-sm font-bold flex items-center justify-center mb-4">3</div>
+                    <h3 class="text-white font-semibold mb-2">Review &amp; Order</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Review AI-generated match explanations, check proactive warnings, and click through directly to the JAX ordering page for your chosen strain.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-400 text-xs font-medium border border-navy-800/50">JAX Database</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-400 text-xs font-medium border border-navy-800/50">NLP Search</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-400 text-xs font-medium border border-navy-800/50">RAG Pipeline</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-400 text-xs font-medium border border-navy-800/50">Python</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-400 text-xs font-medium border border-navy-800/50">LLM Orchestration</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Use Cases</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Academic Researchers</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Graduate students and PIs who need to find the right mouse model for a new grant or experiment &mdash; without spending hours navigating the JAX catalog.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Pharma Preclinical Teams</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Drug development teams selecting models for efficacy and toxicity studies who need strain-appropriate background matching and phenotype validation.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Vivarium Managers</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Core facility staff fielding researcher requests for specific models, needing quick identification of correct strains and alternatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Interested in Mouse Selector?</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Request a demo or learn how Mouse Selector can streamline model selection for your lab.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:alex@orchestrated.bio?subject=Mouse%20Selector%20Demo%20Request" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-500 hover:bg-navy-400 text-white font-medium transition-all hover:shadow-lg hover:shadow-navy-500/20">
+                    Request Access
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="/#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-navy-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-navy-950">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

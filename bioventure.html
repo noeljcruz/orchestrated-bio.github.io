@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVenture | Orchestrated Biosciences</title>
+    <meta name="description" content="BioVenture — multi-agent AI due diligence for biotech deals. AI agents score clinical risk, market opportunity, target validation, and comparable transactions in parallel.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo-icon.png">
+    <link rel="apple-touch-icon" href="images/logo-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orchestrated.bio/bioventure.html">
+    <meta property="og:title" content="BioVenture | Orchestrated Biosciences">
+    <meta property="og:description" content="Multi-agent due diligence for biotech deals. AI agents score clinical risk, market opportunity, target validation, and comparable transactions in parallel.">
+    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://orchestrated.bio/bioventure.html">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QR515CQLLQ');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#edfcf5', 100: '#d3f8e6', 200: '#aaf0d1', 300: '#73e2b7',
+                            400: '#3acc98', 500: '#16b17e', 600: '#0a8f65', 700: '#087253',
+                            800: '#095a43', 900: '#084a38', 950: '#032920',
+                        },
+                        navy: {
+                            50: '#f0f4fd', 100: '#e4ebfb', 200: '#cedaf6', 300: '#b0c0ef',
+                            400: '#919ee6', 500: '#7a81db', 600: '#6462cc', 700: '#5652b3',
+                            800: '#474591', 900: '#1a1f3d', 950: '#0d1020',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d1020; }
+        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #087253; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
+                <span class="text-lg font-semibold text-white">Orchestrated<span class="text-brand-400">.bio</span></span>
+            </a>
+            <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-amber-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-amber-400/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-brand-500/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
+                    </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-medium">Agentic AI</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Bio<span class="gradient-text">Venture</span>
+            </h1>
+            <p class="text-amber-400 text-lg font-medium mb-4">AI Deal Pipeline &amp; Due Diligence</p>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+                BioVenture deploys multiple AI agents in parallel to perform comprehensive due diligence
+                on biotech deals. Agents independently score clinical risk, market opportunity, target
+                validation strength, and comparable transactions &mdash; then synthesize their findings into
+                a unified investment thesis with confidence scores and risk flags.
+            </p>
+
+            <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-amber-500/10 max-w-3xl">
+                <img src="images/bioventure-demo.gif" alt="BioVenture — AI-powered biotech deal pipeline with multi-agent due diligence scoring" class="w-full" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Multi-Agent Due Diligence</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Specialized AI agents work in parallel &mdash; one evaluates clinical risk, another assesses market size, a third validates the scientific target, and a fourth analyzes comparable transactions.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Quantified Deal Scoring</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Each dimension produces a confidence-weighted score. BioVenture synthesizes them into a composite deal score with clear risk/reward breakdown and sensitivity analysis.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Risk Flag System</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Automatic identification of red flags &mdash; patent cliffs, regulatory hurdles, competitive threats, clinical trial failures in similar programs, and management concerns.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Investment Memo Generation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Produces structured investment memos with executive summary, thesis, risk analysis, comparable transactions, and recommended terms &mdash; ready for IC presentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">1</div>
+                    <h3 class="text-white font-semibold mb-2">Input Deal Parameters</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Provide the target company, therapeutic area, stage, and any available deal terms. BioVenture ingests public filings, publications, and patent data automatically.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">2</div>
+                    <h3 class="text-white font-semibold mb-2">Parallel Agent Analysis</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Four specialized agents analyze the deal simultaneously: clinical risk assessment, market sizing, target validation review, and comparable transaction analysis.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">3</div>
+                    <h3 class="text-white font-semibold mb-2">Synthesis &amp; Memo</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">A synthesis agent combines all findings, resolves conflicting signals, produces a composite score with confidence intervals, and generates an IC-ready investment memo.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">Multi-Agent</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">Deal Scoring</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">Python</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">LLM Orchestration</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">SEC / PubMed / Patents</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Use Cases</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Biotech VCs &amp; PE Firms</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Accelerate deal screening and due diligence. Evaluate more opportunities with consistent, quantified analysis instead of relying solely on manual analyst work.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Pharma BD &amp; Licensing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Evaluate in-licensing targets with rigorous, multi-dimensional analysis. Compare deal terms against comparable transactions and benchmark valuations.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Family Offices &amp; Funds</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Life science-focused family offices and specialty funds that need biotech domain expertise without building a full internal analysis team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Interested in BioVenture?</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Request a demo or learn how BioVenture can accelerate your biotech deal pipeline and due diligence.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:alex@orchestrated.bio?subject=BioVenture%20Demo%20Request" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-navy-950 font-medium transition-all hover:shadow-lg hover:shadow-amber-500/20">
+                    Request Access
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="/#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-amber-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-navy-950">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

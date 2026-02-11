@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Radar | Orchestrated Biosciences</title>
+    <meta name="description" content="AI Radar — automated competitive intelligence scanning 7 sources with AI-scored findings and weekly strategic analysis. Built by Orchestrated Biosciences.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo-icon.png">
+    <link rel="apple-touch-icon" href="images/logo-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orchestrated.bio/ai-radar.html">
+    <meta property="og:title" content="AI Radar | Orchestrated Biosciences">
+    <meta property="og:description" content="Automated landscape scanner monitoring 7 sources with AI-scored findings and weekly strategic analysis of competitors and market signals.">
+    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://orchestrated.bio/ai-radar.html">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QR515CQLLQ');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#edfcf5', 100: '#d3f8e6', 200: '#aaf0d1', 300: '#73e2b7',
+                            400: '#3acc98', 500: '#16b17e', 600: '#0a8f65', 700: '#087253',
+                            800: '#095a43', 900: '#084a38', 950: '#032920',
+                        },
+                        navy: {
+                            50: '#f0f4fd', 100: '#e4ebfb', 200: '#cedaf6', 300: '#b0c0ef',
+                            400: '#919ee6', 500: '#7a81db', 600: '#6462cc', 700: '#5652b3',
+                            800: '#474591', 900: '#1a1f3d', 950: '#0d1020',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .gradient-text {
+            background: linear-gradient(135deg, #b0c0ef, #7a81db, #919ee6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d1020; }
+        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #087253; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
+                <span class="text-lg font-semibold text-white">Orchestrated<span class="text-brand-400">.bio</span></span>
+            </a>
+            <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-navy-300/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-500/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-500/20 to-brand-500/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                    </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-navy-500/10 text-navy-300 text-xs font-medium">Intelligence</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
+                AI <span class="gradient-text">Radar</span>
+            </h1>
+            <p class="text-navy-300 text-lg font-medium mb-4">Competitive Intelligence Automation</p>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+                AI Radar continuously monitors 7 intelligence sources to track competitors, market shifts,
+                and emerging threats. Every finding is AI-scored for relevance, categorized by impact,
+                and synthesized into weekly strategic briefings &mdash; replacing hours of manual research
+                with an autonomous intelligence pipeline that never sleeps.
+            </p>
+
+            <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-navy-500/10 max-w-3xl">
+                <img src="images/ai-radar-demo.png" alt="AI Radar — continuous agentic competitive landscape analysis with AI-scored findings" class="w-full" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">7-Source Monitoring</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Scans news, press releases, SEC filings, patent databases, clinical trial registries, social media, and industry publications &mdash; all in one automated pipeline.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">AI-Scored Findings</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Every signal is scored for relevance, novelty, and strategic impact. High-priority alerts surface immediately; lower-priority items aggregate into periodic digests.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Weekly Strategic Briefings</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">AI-generated weekly reports synthesize all findings into actionable intelligence: competitor moves, market trends, partnership opportunities, and threat assessments.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-navy-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Customizable Watch Lists</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Define competitors, technologies, therapeutic areas, and keywords to monitor. AI Radar focuses on what matters to your business and filters out noise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-300 text-sm font-bold flex items-center justify-center mb-4">1</div>
+                    <h3 class="text-white font-semibold mb-2">Configure Your Radar</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Define your competitive landscape &mdash; companies to track, technology keywords, therapeutic areas, geographic regions. Set alert thresholds and reporting cadence.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-300 text-sm font-bold flex items-center justify-center mb-4">2</div>
+                    <h3 class="text-white font-semibold mb-2">Continuous Scanning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">AI agents autonomously scan all 7 sources, extract relevant signals, cross-reference findings, and score each item for strategic impact and reliability.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-navy-500/20 text-navy-300 text-sm font-bold flex items-center justify-center mb-4">3</div>
+                    <h3 class="text-white font-semibold mb-2">Briefings &amp; Alerts</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Receive real-time high-priority alerts and comprehensive weekly briefings. Each finding includes source links, AI analysis, and recommended actions.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">Web Scraping</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">NLP Analysis</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">Multi-Agent</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">Python</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">LLM Orchestration</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-navy-300 text-xs font-medium border border-navy-800/50">SEC / ClinicalTrials.gov</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Use Cases</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Biotech Executives</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Track competitor pipeline moves, partnership announcements, and funding rounds without dedicating analyst hours to manual monitoring.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Strategy &amp; BD Teams</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Identify partnership opportunities, licensing deals, and acquisition targets as they emerge. Stay ahead of market shifts with automated landscape analysis.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Investors &amp; VCs</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Monitor portfolio companies and their competitive environments. Get early signals on clinical trial results, regulatory decisions, and market-moving events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Interested in AI Radar?</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Request a demo or learn how AI Radar can automate your competitive intelligence workflow.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:alex@orchestrated.bio?subject=AI%20Radar%20Demo%20Request" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-navy-500 hover:bg-navy-400 text-white font-medium transition-all hover:shadow-lg hover:shadow-navy-500/20">
+                    Request Access
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="/#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-navy-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-navy-950">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Advisor | Orchestrated Biosciences</title>
+    <meta name="description" content="Spatial Advisor — agentic spatial transcriptomics analysis. An AI agent that profiles your data, recommends methods, executes analysis steps, and auto-adapts. Built by Orchestrated Biosciences.">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo-icon.png">
+    <link rel="apple-touch-icon" href="images/logo-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orchestrated.bio/spatial-advisor.html">
+    <meta property="og:title" content="Spatial Advisor | Orchestrated Biosciences">
+    <meta property="og:description" content="An AI agent that guides spatial transcriptomics analysis — profiles data, recommends methods, executes steps, and auto-adapts.">
+    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://orchestrated.bio/spatial-advisor.html">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QR515CQLLQ');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#edfcf5', 100: '#d3f8e6', 200: '#aaf0d1', 300: '#73e2b7',
+                            400: '#3acc98', 500: '#16b17e', 600: '#0a8f65', 700: '#087253',
+                            800: '#095a43', 900: '#084a38', 950: '#032920',
+                        },
+                        navy: {
+                            50: '#f0f4fd', 100: '#e4ebfb', 200: '#cedaf6', 300: '#b0c0ef',
+                            400: '#919ee6', 500: '#7a81db', 600: '#6462cc', 700: '#5652b3',
+                            800: '#474591', 900: '#1a1f3d', 950: '#0d1020',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .gradient-text {
+            background: linear-gradient(135deg, #16b17e, #3acc98, #73e2b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0d1020; }
+        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #087253; }
+    </style>
+</head>
+<body class="bg-navy-950 text-gray-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
+                <span class="text-lg font-semibold text-white">Orchestrated<span class="text-brand-400">.bio</span></span>
+            </a>
+            <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-300/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 to-navy-500/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/>
+                    </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-300 text-xs font-medium">Agentic AI</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
+                Spatial <span class="gradient-text">Advisor</span>
+            </h1>
+            <p class="text-brand-300 text-lg font-medium mb-4">Agentic Spatial Transcriptomics</p>
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+                An AI agent that guides your entire spatial transcriptomics analysis workflow. Spatial Advisor
+                profiles your data, recommends preprocessing and analysis methods tailored to your tissue and
+                platform, executes each step with best-practice parameters, and auto-adapts when results
+                suggest a different analytical path &mdash; all while keeping you in control of every decision.
+            </p>
+
+            <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-500/10 max-w-3xl">
+                <img src="images/spatial-advisor-demo.gif" alt="Spatial Advisor demo — NSCLC tumor microenvironment analysis with AI workflow guidance" class="w-full" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Key Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Automated Data Profiling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Automatically characterizes your dataset &mdash; identifies tissue type, spatial platform (Visium, MERFISH, Slide-seq), gene coverage, and quality metrics before recommending next steps.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Adaptive Method Selection</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Recommends the right tools for each analysis step &mdash; normalization, clustering, spatial statistics, cell-type deconvolution &mdash; adapting recommendations as results come in.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Step-by-Step Execution</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Executes each analysis step with optimized parameters, generates visualizations, and explains results in context &mdash; like having an experienced bioinformatician guiding your work.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Auto-Adaptive Workflow</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">If clustering reveals unexpected heterogeneity or QC flags issues, the agent automatically revises its approach and suggests alternative analyses &mdash; no manual debugging needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-300 text-sm font-bold flex items-center justify-center mb-4">1</div>
+                    <h3 class="text-white font-semibold mb-2">Upload Your Data</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Provide your spatial transcriptomics dataset (AnnData, h5ad, or count matrix). The agent profiles your data and identifies the platform, tissue type, and quality characteristics.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-300 text-sm font-bold flex items-center justify-center mb-4">2</div>
+                    <h3 class="text-white font-semibold mb-2">AI Plans Your Analysis</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">The agent proposes a tailored analysis pipeline &mdash; QC, normalization, feature selection, dimensionality reduction, spatial clustering, and downstream analyses &mdash; explaining each choice.</p>
+                </div>
+                <div>
+                    <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-300 text-sm font-bold flex items-center justify-center mb-4">3</div>
+                    <h3 class="text-white font-semibold mb-2">Execute &amp; Adapt</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Each step runs with optimized parameters. Results are visualized, interpreted, and used to inform the next step. If the data suggests a different approach, the agent pivots automatically.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">Scanpy</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">Squidpy</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">AnnData</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">Python</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">LLM Orchestration</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-brand-300 text-xs font-medium border border-brand-800/30">Visium / MERFISH / Slide-seq</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-white mb-10">Use Cases</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Tumor Microenvironment</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Map the spatial organization of immune cells, tumor cells, and stroma in cancer biopsies. Identify co-localization patterns that predict treatment response.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Neuroscience &amp; Brain Mapping</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Analyze spatial gene expression in brain tissue sections. Delineate anatomical regions, identify cell types, and discover spatially variable genes.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-navy-900/30 border border-white/5">
+                    <h3 class="text-white font-semibold mb-2">Drug Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Evaluate drug effects on tissue architecture at single-cell spatial resolution. Compare treated vs. control samples to identify on-target and off-target spatial signatures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Interested in Spatial Advisor?</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">Request a demo or learn how Spatial Advisor can accelerate your spatial transcriptomics analysis.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:alex@orchestrated.bio?subject=Spatial%20Advisor%20Demo%20Request" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                    Request Access
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="/#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                    &larr; Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-navy-950">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
