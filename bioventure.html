@@ -113,7 +113,7 @@
                 BioVenture deploys multiple AI agents in parallel to perform comprehensive due diligence
                 on biotech deals. Agents independently score clinical risk, market opportunity, target
                 validation strength, and comparable transactions &mdash; then synthesize their findings into
-                a unified investment thesis with confidence scores and risk flags.
+                a composite deal grade with risk-adjusted valuations and risk flags.
             </p>
 
             <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-amber-500/10 max-w-3xl">
@@ -144,7 +144,7 @@
                         </svg>
                     </div>
                     <h3 class="text-white font-semibold mb-2">Quantified Deal Scoring</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Each dimension produces a confidence-weighted score. BioVenture synthesizes them into a composite deal score with clear risk/reward breakdown and sensitivity analysis.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Each dimension produces a scored assessment with sentiment analysis. BioVenture synthesizes them into a composite deal grade (A through C) with clear risk/opportunity breakdown.</p>
                 </div>
 
                 <div class="p-6 rounded-2xl bg-navy-900/40 border border-white/5">
@@ -163,8 +163,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
                         </svg>
                     </div>
-                    <h3 class="text-white font-semibold mb-2">Investment Memo Generation</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Produces structured investment memos with executive summary, thesis, risk analysis, comparable transactions, and recommended terms &mdash; ready for IC presentation.</p>
+                    <h3 class="text-white font-semibold mb-2">Diligence Report Generation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Produces structured diligence reports with clinical assessment, market sizing, target validation, comparable transactions, key risks, and key opportunities.</p>
                 </div>
             </div>
         </div>
@@ -178,7 +178,7 @@
                 <div>
                     <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">1</div>
                     <h3 class="text-white font-semibold mb-2">Input Deal Parameters</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Provide the target company, therapeutic area, stage, and any available deal terms. BioVenture ingests public filings, publications, and patent data automatically.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Provide the target company, therapeutic area, stage, and any available deal terms. BioVenture queries SEC EDGAR, ClinicalTrials.gov, OpenTargets, openFDA, and epidemiology data automatically.</p>
                 </div>
                 <div>
                     <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">2</div>
@@ -188,7 +188,7 @@
                 <div>
                     <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center mb-4">3</div>
                     <h3 class="text-white font-semibold mb-2">Synthesis &amp; Memo</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">A synthesis agent combines all findings, resolves conflicting signals, produces a composite score with confidence intervals, and generates an IC-ready investment memo.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">The orchestrator combines all findings, resolves conflicting signals, produces a composite deal grade with key risks and opportunities, and generates a structured diligence report.</p>
                 </div>
             </div>
 
@@ -197,7 +197,7 @@
                 <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">Deal Scoring</span>
                 <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">Python</span>
                 <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">LLM Orchestration</span>
-                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">SEC / PubMed / Patents</span>
+                <span class="px-3 py-1.5 rounded-lg bg-navy-900/60 text-amber-400 text-xs font-medium border border-amber-900/30">SEC / ClinicalTrials.gov / OpenTargets</span>
             </div>
         </div>
     </section>
