@@ -194,6 +194,7 @@
                 <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Portfolio</a>
+                    <a href="#deployment" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Deployment</a>
                     <a href="#team" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Team</a>
                     <a href="mailto:alex@orchestrated.bio?subject=Demo%20Request%20-%20Orchestrated%20Biosciences" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">
                         Get in Touch
@@ -213,6 +214,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5">
             <div class="px-4 py-4 space-y-3">
                 <a href="#products" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Portfolio</a>
+                <a href="#deployment" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Deployment</a>
                 <a href="#team" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Team</a>
                 <a href="mailto:alex@orchestrated.bio?subject=Demo%20Request%20-%20Orchestrated%20Biosciences" class="block text-sm text-brand-400 font-medium py-2">Get in Touch</a>
             </div>
@@ -266,7 +268,7 @@
                     <!-- Stats bar -->
                     <div class="flex flex-wrap gap-8 pt-4">
                         <div>
-                            <div class="text-2xl font-bold text-white">6</div>
+                            <div class="text-2xl font-bold text-white">5</div>
                             <div class="text-xs text-gray-500 mt-1">AI Products Shipped</div>
                         </div>
                         <div class="w-px bg-white/10"></div>
@@ -281,7 +283,7 @@
                         </div>
                         <div class="w-px bg-white/10"></div>
                         <div>
-                            <div class="text-2xl font-bold text-brand-400 text-sm font-medium mt-1">Patent Pending</div>
+                            <div class="text-sm font-medium text-brand-400 mt-1">Patent Pending</div>
                             <div class="text-xs text-gray-500 mt-1">Core Technology</div>
                         </div>
                     </div>
@@ -557,6 +559,57 @@
 
 
 
+    <!-- Deployment Models Section -->
+    <section id="deployment" class="py-20 lg:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                    Deployment Options
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    Your Data, <span class="gradient-text">Your Infrastructure</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Every product runs locally by default. No data leaves your network unless you choose otherwise.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Academic -->
+                <div class="p-6 rounded-2xl bg-navy-900/50 border border-white/5 text-center">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Academic</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Free access for researchers at academic institutions and non-profits.</p>
+                </div>
+                <!-- SaaS -->
+                <div class="p-6 rounded-2xl bg-navy-900/50 border border-brand-500/20 text-center relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-brand-500 text-white text-[10px] font-semibold">Most Popular</div>
+                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Hosted SaaS</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Managed cloud deployment with SOC 2 compliance. Pay per seat.</p>
+                </div>
+                <!-- Enterprise -->
+                <div class="p-6 rounded-2xl bg-navy-900/50 border border-white/5 text-center">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Enterprise / On-Prem</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Air-gapped deployment on your hardware. SBIR and federal contract ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section id="team" class="py-24 lg:py-32 relative overflow-hidden">
         <!-- Subtle background texture for visual variety -->
@@ -663,6 +716,35 @@
     </section>
 
 
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="p-10 sm:p-14 rounded-2xl bg-gradient-to-br from-brand-900/40 to-navy-900/60 border border-brand-500/10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                    Ready to Automate Your Workflows?
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+                    Tell us about your use case. We'll show you how agentic AI can replace
+                    weeks of manual analysis with minutes of autonomous execution.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:alex@orchestrated.bio?subject=Demo Request - Orchestrated Biosciences" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                        Schedule a Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-500/30 text-white font-medium transition-all hover:bg-white/5">
+                        Try Insight Free
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="border-t border-white/5 bg-navy-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -686,6 +768,7 @@
                     <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
                         <li><a href="#products" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Portfolio</a></li>
+                        <li><a href="#deployment" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Deployment</a></li>
                         <li><a href="#team" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Team</a></li>
                         <li><a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Insight&trade;</a></li>
                     </ul>
