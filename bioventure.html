@@ -15,16 +15,12 @@
     <meta property="og:description" content="Multi-agent due diligence for biotech deals. AI agents score clinical risk, market opportunity, target validation, and comparable transactions in parallel.">
     <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BioVenture | Orchestrated Biosciences">
+    <meta name="twitter:description" content="Multi-agent due diligence for biotech deals. AI agents score clinical risk, market opportunity, target validation, and comparable transactions.">
     <link rel="canonical" href="https://orchestrated.bio/bioventure.html">
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QR515CQLLQ');
-    </script>
+    <!-- Cookie-gated Google Analytics 4 -->
+    <script src="js/cookie-consent.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -76,15 +72,27 @@
 <body class="bg-navy-950 text-gray-200 font-sans antialiased">
 
     <!-- Navigation -->
-    <nav class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
+    <nav id="navbar" class="bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="/" class="flex items-center gap-3 group">
                 <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
                 <span class="text-lg font-semibold text-white">Orchestrated<span class="text-brand-400">.bio</span></span>
             </a>
-            <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">
-                &larr; Back to Portfolio
-            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="/#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Portfolio</a>
+                <a href="/#deployment" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Deployment</a>
+                <a href="/#team" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Team</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5">
+            <div class="px-4 py-4 space-y-3">
+                <a href="/#products" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Portfolio</a>
+                <a href="/#deployment" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Deployment</a>
+                <a href="/#team" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Team</a>
+            </div>
         </div>
     </nav>
 
@@ -243,7 +251,7 @@
     <!-- Footer -->
     <footer class="border-t border-white/5 bg-navy-950">
         <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+            <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&reg;. All rights reserved.</p>
             <div class="flex gap-6">
                 <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
                 <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
@@ -251,5 +259,6 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

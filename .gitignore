@@ -13,5 +13,8 @@ Thumbs.db
 tmp/
 *.tmp
 
+# Dev recording scripts
+scripts/record-*.js
+
 # Node (if added later)
 node_modules/

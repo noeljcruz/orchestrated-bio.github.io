@@ -21,14 +21,8 @@
     <meta name="twitter:image" content="https://orchestrated.bio/images/og-image.png">
     <link rel="canonical" href="https://orchestrated.bio/">
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR515CQLLQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QR515CQLLQ');
-    </script>
+    <!-- Cookie-gated Google Analytics 4 -->
+    <script src="js/cookie-consent.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -167,8 +161,7 @@
         "description": "Conversational cancer genomics intelligence platform. Ask questions about TCGA cancer data in plain English and get instant, publication-quality visualizations.",
         "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+            "availability": "https://schema.org/OnlineOnly"
         },
         "creator": {
             "@type": "Organization",
@@ -176,6 +169,7 @@
         }
     }
     </script>
+    <noscript><style>section{opacity:1!important;transform:none!important;}</style></noscript>
 </head>
 <body class="bg-navy-950 text-gray-200 font-sans antialiased">
 
@@ -269,12 +263,12 @@
                     <div class="flex flex-wrap gap-8 pt-4">
                         <div>
                             <div class="text-2xl font-bold text-white">5</div>
-                            <div class="text-xs text-gray-500 mt-1">AI Products Shipped</div>
+                            <div class="text-xs text-gray-500 mt-1">AI Products Built</div>
                         </div>
                         <div class="w-px bg-white/10"></div>
                         <div>
-                            <div class="text-2xl font-bold text-white">15+</div>
-                            <div class="text-xs text-gray-500 mt-1">Years Combined Experience</div>
+                            <div class="text-2xl font-bold text-white">199+</div>
+                            <div class="text-xs text-gray-500 mt-1">Clinical Metadata Fields</div>
                         </div>
                         <div class="w-px bg-white/10"></div>
                         <div>
@@ -385,8 +379,8 @@
             <!-- Flagship: Insight — full-width hero card -->
             <div class="product-card group relative mb-6 rounded-2xl bg-navy-900/50 border border-brand-500/10 hover:border-brand-500/25 overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-brand-500/[0.03] to-transparent"></div>
-                <div class="relative grid lg:grid-cols-5 gap-0">
-                    <div class="lg:col-span-3 p-8 lg:p-10">
+                <div class="relative">
+                    <div class="p-8 lg:p-10">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-700/20 flex items-center justify-center">
                                 <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -414,11 +408,6 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
                             </svg>
                         </a>
-                    </div>
-                    <div class="lg:col-span-2 hidden lg:flex items-center justify-center p-6">
-                        <div class="rounded-lg overflow-hidden border border-white/5 shadow-lg">
-                            <img src="images/insight-demo.gif" alt="Insight platform demo — conversational cancer genomics query with AI-generated charts" class="w-full" loading="lazy">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -587,7 +576,6 @@
                 </div>
                 <!-- SaaS -->
                 <div class="p-6 rounded-2xl bg-navy-900/50 border border-brand-500/20 text-center relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-brand-500 text-white text-[10px] font-semibold">Most Popular</div>
                     <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
                         <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/>
@@ -620,7 +608,7 @@
                     Our Team
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Built by <span class="gradient-text">Scientists & Engineers</span>
+                    Built by <span class="gradient-text">Scientists &amp; Engineers</span>
                 </h2>
                 <p class="text-gray-400 text-lg leading-relaxed">
                     Our founding team brings together deep biomedical research, agentic AI development,
@@ -796,7 +784,7 @@
 
             <div class="border-t border-white/5 mt-10 pt-8">
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
-                    <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&trade;. All rights reserved.</p>
+                    <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&reg;. All rights reserved.</p>
                     <div class="flex gap-6">
                         <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
                         <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
