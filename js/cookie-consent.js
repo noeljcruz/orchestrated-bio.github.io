@@ -75,13 +75,22 @@
             showBanner();
         }
     }
-    // Track booking button clicks
+    // Track CTA clicks
     document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[href*="calendar.google.com/calendar/appointments"]');
-        if (!link || typeof window.gtag !== 'function') return;
-        window.gtag('event', 'book_demo_click', {
-            button_text: link.textContent.trim(),
-            page_location: window.location.pathname
-        });
+        if (typeof window.gtag !== 'function') return;
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        if (href.indexOf('calendar.google.com/calendar/appointments') !== -1) {
+            window.gtag('event', 'book_demo_click', {
+                button_text: link.textContent.trim(),
+                page_location: window.location.pathname
+            });
+        } else if (href.indexOf('insight.orchestrated.bio') !== -1) {
+            window.gtag('event', 'try_insight_click', {
+                button_text: link.textContent.trim(),
+                page_location: window.location.pathname
+            });
+        }
     });
 })();
