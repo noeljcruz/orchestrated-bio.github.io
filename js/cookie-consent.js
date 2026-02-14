@@ -75,4 +75,13 @@
             showBanner();
         }
     }
+    // Track booking button clicks
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href*="calendar.google.com/calendar/appointments"]');
+        if (!link || typeof window.gtag !== 'function') return;
+        window.gtag('event', 'book_demo_click', {
+            button_text: link.textContent.trim(),
+            page_location: window.location.pathname
+        });
+    });
 })();
