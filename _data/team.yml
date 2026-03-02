@@ -1,0 +1,58 @@
+- name: "Alex Nesta, PhD"
+  role: "Co-Founder & Chief Technology Officer"
+  photo: images/alex-nesta.jpg
+  bio: >-
+    Geneticist and data scientist with a PhD from UConn Health specializing in
+    cancer genomics and RNA biology. Six years of research at UConn and The Jackson
+    Laboratory for Genomic Medicine, followed by 3.5 years as a bioinformatics
+    consultant serving pharma, biotech, and academic labs. Now channeling a decade
+    of bench and industry experience into agentic AI systems that make complex
+    genomic analysis accessible to every researcher.
+  skills:
+    - Agentic AI
+    - Cancer Genomics
+    - Long-read RNA-seq
+    - Spatial Omics
+    - Biomarker ID
+  links:
+    - url: "https://www.linkedin.com/in/alex-v-nesta-phd-847547a5/"
+      label: LinkedIn
+      icon: linkedin
+    - url: "https://github.com/alexvnesta"
+      label: GitHub
+      icon: github
+    - url: "https://scholar.google.com/citations?user=lY6GlyoAAAAJ&hl=en"
+      label: Google Scholar
+      icon: scholar
+    - url: "mailto:alex@orchestrated.bio"
+      label: Email
+      icon: email
+
+- name: "Noel Cruz"
+  role: "Co-Founder & Chief Operating Officer"
+  photo: images/noel-cruz.jpg
+  bio: >-
+    Decorated U.S. Coast Guard veteran and software engineer with Stanford ML certification.
+    Former roles at Activision Blizzard, L3Harris Technologies, and Microsoft. Deep network
+    across the defense contracting ecosystem with colleagues at major primes and government
+    agencies. Combines military leadership, technical depth, and business acumen to drive
+    operational excellence, from biomedical AI to government-grade agentic solutions.
+  skills:
+    - Project Management
+    - Software Engineering
+    - Machine Learning
+    - Military Leadership
+    - Gov/Defense Contracting
+  links:
+    - url: "https://www.linkedin.com/in/noeljcruz/"
+      label: LinkedIn
+      icon: linkedin
+    - url: "https://github.com/noeljcruz"
+      label: GitHub
+      icon: github
+    - url: "https://noeljcruz.com/"
+      label: Personal Website
+      icon: website
+    - url: "mailto:noel@orchestrated.bio"
+      label: Email
+      icon: email

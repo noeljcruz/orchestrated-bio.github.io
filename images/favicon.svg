@@ -1,20 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#16b17e"/>
       <stop offset="100%" stop-color="#087253"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <!-- DNA double helix stylized as "OB" -->
-  <path d="M20 16 C20 16 28 24 32 32 C36 40 44 48 44 48" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M44 16 C44 16 36 24 32 32 C28 40 20 48 20 48" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <!-- Rungs -->
-  <line x1="24" y1="22" x2="40" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="22" y1="32" x2="42" y2="32" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="24" y1="42" x2="40" y2="42" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <!-- Nodes at intersections -->
-  <circle cx="32" cy="32" r="3" fill="white" opacity="0.8"/>
-  <circle cx="26" cy="20" r="2" fill="white" opacity="0.6"/>
-  <circle cx="38" cy="44" r="2" fill="white" opacity="0.6"/>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- Zoomed: ~1.5 loops, centered in the rounded rect -->
+  <g transform="translate(4, 14)">
+    <!-- DNA Rungs (fewer, chunkier) -->
+    <g stroke="white" stroke-width="2.5" opacity="0.55" stroke-linecap="round">
+      <line x1="4" y1="16" x2="4" y2="20"/>
+      <line x1="11" y1="12" x2="11" y2="24"/>
+      <line x1="18" y1="9" x2="18" y2="27"/>
+      <line x1="25" y1="12" x2="25" y2="24"/>
+      <line x1="32" y1="16" x2="32" y2="20"/>
+      <line x1="39" y1="12" x2="39" y2="24"/>
+      <line x1="46" y1="9" x2="46" y2="27"/>
+      <line x1="53" y1="12" x2="53" y2="24"/>
+    </g>
+    <!-- Waves -->
+    <path d="M-2 18 Q 12 -2, 28 18 T 58 18" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.95"/>
+    <path d="M-2 18 Q 12 38, 28 18 T 58 18" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+    <!-- Intersection -->
+    <circle cx="28" cy="18" r="3.5" fill="white" opacity="0.9"/>
+  </g>
 </svg>

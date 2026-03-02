@@ -1,0 +1,43 @@
+/* Custom animations */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+.animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #16b17e, #3acc98, #7a81db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero background pattern */
+.hero-bg {
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(22, 177, 126, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(122, 129, 219, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(58, 204, 152, 0.05) 0%, transparent 50%);
+}
+
+/* Card hover effects */
+.product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(22, 177, 126, 0.3), rgba(122, 129, 219, 0.3), transparent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d1020; }
+::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #087253; }

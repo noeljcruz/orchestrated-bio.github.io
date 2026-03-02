@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="pt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Blog header -->
+        <div class="max-w-3xl mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                Blog
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">{{ page.title | default: "Engineering & Insights" }}</h1>
+            <p class="text-gray-400 text-lg leading-relaxed">{{ page.description | default: "Notes on building AI-powered tools for bioscience, from the engineering trenches." }}</p>
+        </div>
+
+        {{ content }}
+
+        <!-- Post grid -->
+        {% assign posts = paginator.posts | default: site.posts %}
+        {% if posts.size > 0 %}
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for post in posts %}
+            {% include blog-card.html post=post %}
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
+        <nav class="mt-12 flex justify-center gap-2" aria-label="Blog pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-brand-500/30 transition-all text-sm">
+                &larr; Newer
+            </a>
+            {% endif %}
+
+            <span class="px-4 py-2 text-gray-500 text-sm">
+                Page {{ paginator.page }} of {{ paginator.total_pages }}
+            </span>
+
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="px-4 py-2 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-brand-500/30 transition-all text-sm">
+                Older &rarr;
+            </a>
+            {% endif %}
+        </nav>
+        {% endif %}
+
+        {% else %}
+        <div class="text-center py-16">
+            <p class="text-gray-500 text-lg">No posts yet. Check back soon.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>

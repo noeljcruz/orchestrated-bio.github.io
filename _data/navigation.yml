@@ -1,0 +1,49 @@
+# Header navigation
+header:
+  - title: Portfolio
+    url: "/#products"
+  - title: Team
+    url: "/#team"
+  - title: Blog
+    url: "/blog/"
+
+# Footer columns
+footer:
+  products:
+    title: Products
+    links:
+      - title: "Insight&trade;"
+        url: "https://insight.orchestrated.bio"
+        external: true
+      - title: Mouse Selector
+        url: /products/mouse-selector.html
+      - title: Spatial Advisor
+        url: /products/spatial-advisor.html
+      - title: AI Radar
+        url: /products/ai-radar.html
+      - title: BioVenture
+        url: /products/bioventure.html
+
+  resources:
+    title: Resources
+    links:
+      - title: Blog
+        url: /blog/
+      - title: Schedule a Demo
+        url: BOOKING_URL
+        external: true
+      - title: GitHub
+        url: "https://github.com/orchestrated-bio"
+        external: true
+
+  company:
+    title: Company
+    links:
+      - title: Team
+        url: "/#team"
+      - title: Privacy Policy
+        url: /privacy-policy.html
+      - title: Terms of Service
+        url: /terms.html
+      - title: Contact
+        url: "mailto:support@orchestrated.bio"

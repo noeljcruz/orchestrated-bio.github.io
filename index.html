@@ -1,794 +1,226 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orchestrated Biosciences | AI-Driven Precision Medicine & Agentic AI Solutions</title>
-    <meta name="description" content="Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine, drug discovery, and mission-critical government applications.">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/logo-icon.png">
-    <link rel="apple-touch-icon" href="images/logo-icon.png">
+---
+layout: home
+title: null
+description: "Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine, drug discovery, and mission-critical government applications."
+---
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://orchestrated.bio/">
-    <meta property="og:title" content="Orchestrated Biosciences | AI-Driven Precision Medicine & Agentic AI Solutions">
-    <meta property="og:description" content="Orchestrated Biosciences combines agentic AI with biomedical expertise to accelerate precision medicine, drug discovery, and mission-critical government applications.">
-    <meta property="og:image" content="https://orchestrated.bio/images/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Orchestrated Biosciences | AI-Driven Precision Medicine & Agentic AI Solutions">
-    <meta name="twitter:description" content="Agentic AI systems for cancer genomics, drug discovery, precision medicine, and government applications.">
-    <meta name="twitter:image" content="https://orchestrated.bio/images/og-image.png">
-    <link rel="canonical" href="https://orchestrated.bio/">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center hero-bg overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-600/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <!-- Grid pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    </div>
 
-    <!-- Cookie-gated Google Analytics 4 -->
-    <script src="js/cookie-consent.js"></script>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                    Agentic AI That
+                    <span class="gradient-text">Understands the Science</span>
+                </h1>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#edfcf5',
-                            100: '#d3f8e6',
-                            200: '#aaf0d1',
-                            300: '#73e2b7',
-                            400: '#3acc98',
-                            500: '#16b17e',
-                            600: '#0a8f65',
-                            700: '#087253',
-                            800: '#095a43',
-                            900: '#084a38',
-                            950: '#032920',
-                        },
-                        navy: {
-                            50: '#f0f4fd',
-                            100: '#e4ebfb',
-                            200: '#cedaf6',
-                            300: '#b0c0ef',
-                            400: '#919ee6',
-                            500: '#7a81db',
-                            600: '#6462cc',
-                            700: '#5652b3',
-                            800: '#474591',
-                            900: '#1a1f3d',
-                            950: '#0d1020',
-                        },
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
-                        display: ['Instrument Serif', 'Georgia', 'serif'],
-                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-                    },
-                },
-            },
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        /* Custom animations */
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.8; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #16b17e, #3acc98, #7a81db);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Hero background pattern */
-        .hero-bg {
-            background-image:
-                radial-gradient(ellipse at 20% 50%, rgba(22, 177, 126, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(122, 129, 219, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 80%, rgba(58, 204, 152, 0.05) 0%, transparent 50%);
-        }
-
-        /* Card hover effects */
-        .product-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Section divider */
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(22, 177, 126, 0.3), rgba(122, 129, 219, 0.3), transparent);
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0d1020; }
-        ::-webkit-scrollbar-thumb { background: #1a1f3d; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #087253; }
-    </style>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Orchestrated Biosciences",
-        "alternateName": "Orchestrated.bio",
-        "url": "https://orchestrated.bio",
-        "logo": "https://orchestrated.bio/images/logo-icon.png",
-        "description": "Agentic AI for precision medicine, biomedical research, and government missions. Built by scientists and veterans.",
-        "foundingDate": "2025",
-        "founders": [
-            {
-                "@type": "Person",
-                "name": "Alex Nesta, PhD",
-                "jobTitle": "Co-Founder & Chief Technology Officer",
-                "url": "https://www.linkedin.com/in/alex-v-nesta-phd-847547a5/"
-            },
-            {
-                "@type": "Person",
-                "name": "Noel Cruz",
-                "jobTitle": "Co-Founder & Chief Operating Officer",
-                "url": "https://www.linkedin.com/in/noeljcruz/"
-            }
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "support@orchestrated.bio",
-            "contactType": "sales"
-        },
-        "sameAs": [
-            "https://github.com/orchestrated-bio"
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Insight",
-        "applicationCategory": "HealthApplication",
-        "operatingSystem": "Web",
-        "url": "https://insight.orchestrated.bio",
-        "description": "Conversational cancer genomics intelligence platform. Ask questions about TCGA cancer data in plain English and get instant, publication-quality visualizations.",
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/OnlineOnly"
-        },
-        "creator": {
-            "@type": "Organization",
-            "name": "Orchestrated Biosciences"
-        }
-    }
-    </script>
-    <noscript><style>section{opacity:1!important;transform:none!important;}</style></noscript>
-</head>
-<body class="bg-navy-950 text-gray-200 font-sans antialiased">
-
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-950/80 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 lg:h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-9 h-9 rounded-lg group-hover:shadow-lg group-hover:shadow-brand-500/20 transition-shadow">
-                    <span class="text-lg font-semibold text-white hidden sm:block">
-                        Orchestrated<span class="text-brand-400">.bio</span>
-                    </span>
-                </a>
-
-                <!-- Desktop Nav -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#products" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Portfolio</a>
-                    <a href="#deployment" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Deployment</a>
-                    <a href="#team" class="text-sm text-gray-400 hover:text-brand-400 transition-colors">Team</a>
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1zXkryIo09b7p3OrRx7kTlrM7Nib1obeyZUdG-al77HgkyLUkQ4dlPA5TeMJHwPkFRNELMfcDX?gv=true" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">
-                        Book a Call
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white" aria-label="Toggle menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navy-950/95 backdrop-blur-xl border-t border-white/5">
-            <div class="px-4 py-4 space-y-3">
-                <a href="#products" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Portfolio</a>
-                <a href="#deployment" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Deployment</a>
-                <a href="#team" class="block text-sm text-gray-400 hover:text-brand-400 py-2">Team</a>
-                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1zXkryIo09b7p3OrRx7kTlrM7Nib1obeyZUdG-al77HgkyLUkQ4dlPA5TeMJHwPkFRNELMfcDX?gv=true" target="_blank" rel="noopener" class="block text-sm text-brand-400 font-medium py-2">Book a Call</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center hero-bg overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-600/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
-            <!-- Grid pattern -->
-            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
-        </div>
-
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium">
-                        <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
-                        AI-Powered Bioscience &amp; Government Solutions
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                        Agentic AI That
-                        <span class="gradient-text">Understands the Science</span>
-                    </h1>
-
-                    <p class="text-lg text-gray-400 max-w-xl leading-relaxed">
-                        We build autonomous AI systems for cancer genomics, spatial transcriptomics,
-                        and biomedical intelligence &mdash; designed by researchers who publish in the field,
-                        deployable on your own infrastructure.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1zXkryIo09b7p3OrRx7kTlrM7Nib1obeyZUdG-al77HgkyLUkQ4dlPA5TeMJHwPkFRNELMfcDX?gv=true" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
-                            Schedule a Demo
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                        </a>
-                        <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
-                            Explore Our Portfolio
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Stats bar -->
-                    <div class="flex flex-wrap gap-8 pt-4">
-                        <div>
-                            <div class="text-2xl font-bold text-white">5</div>
-                            <div class="text-xs text-gray-500 mt-1">AI Products Built</div>
-                        </div>
-                        <div class="w-px bg-white/10"></div>
-                        <div>
-                            <div class="text-sm font-medium text-brand-400 mt-1">Patent Pending</div>
-                            <div class="text-xs text-gray-500 mt-1">Core Technology</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero visual — product screenshot -->
-                <div class="hidden lg:flex items-center justify-center relative">
-                    <div class="relative" style="perspective: 1000px;">
-                        <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-500/10" style="transform: rotateY(-6deg) rotateX(2deg);">
-                            <img src="images/insight-demo.gif" alt="Insight cancer genomics platform — conversational AI demo with streaming results" class="w-full" loading="eager">
-                        </div>
-                        <!-- Glow behind -->
-                        <div class="absolute -inset-8 bg-gradient-to-br from-brand-500/10 via-brand-400/5 to-navy-600/10 rounded-3xl blur-3xl -z-10"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Products Section -->
-    <section id="products" class="py-24 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
-                    Our Portfolio
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                    From Research to <span class="gradient-text">Deployed Solutions</span>
-                </h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    We build agentic AI systems that replace manual, multi-step workflows with autonomous,
-                    human-in-the-loop solutions &mdash; from biomedical research to government intelligence.
+                <p class="text-lg text-gray-400 max-w-xl leading-relaxed">
+                    We build AI tools that accelerate cancer genomics, spatial transcriptomics,
+                    and biomedical research. Designed by scientists who publish in the field,
+                    deployable on your own infrastructure.
                 </p>
-            </div>
 
-            <!-- Lead offering: Custom Solutions -->
-            <div class="mb-8 p-8 rounded-2xl bg-gradient-to-br from-brand-900/30 to-navy-900/50 border border-brand-500/10">
-                <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium mb-4">
-                            Custom Agentic AI Solutions
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-4">We Build Agentic AI That Replaces Manual Workflows</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
-                            Your team has domain expertise and data. We build the AI systems that turn
-                            multi-step, expert-dependent processes into autonomous workflows &mdash; with
-                            humans in the loop where it matters. Flexible deployment options from
-                            hosted cloud to on-premise installations.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Biomedical R&amp;D</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Defense &amp; Intelligence</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Government</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Pharma</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">On-Prem / Air-Gapped</span>
-                        </div>
-                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1zXkryIo09b7p3OrRx7kTlrM7Nib1obeyZUdG-al77HgkyLUkQ4dlPA5TeMJHwPkFRNELMfcDX?gv=true" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
-                            Discuss Your Use Case
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="hidden lg:block">
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
-                                <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-white text-sm font-medium">Understand your workflow</p>
-                                    <p class="text-gray-500 text-xs">Map the manual steps and expert decisions</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
-                                <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-white text-sm font-medium">Design the agentic system</p>
-                                    <p class="text-gray-500 text-xs">Domain-tuned orchestration with your data</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
-                                <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7"/></svg>
-                                </div>
-                                <div>
-                                    <p class="text-white text-sm font-medium">Flexible deployment</p>
-                                    <p class="text-gray-500 text-xs">Cloud, on-prem, or air-gapped</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Flagship: Insight — full-width hero card -->
-            <div class="product-card group relative mb-6 rounded-2xl bg-navy-900/50 border border-brand-500/10 hover:border-brand-500/25 overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-brand-500/[0.03] to-transparent"></div>
-                <div class="relative">
-                    <div class="p-8 lg:p-10">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-700/20 flex items-center justify-center">
-                                <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
-                                </svg>
-                            </div>
-                            <span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium">Flagship &middot; Patent Pending</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Insight&trade;</h3>
-                        <p class="text-brand-400 text-sm font-medium mb-4">Conversational Cancer Genomics Intelligence</p>
-                        <p class="text-gray-400 text-base leading-relaxed mb-6">
-                            Ask questions about TCGA cancer data in plain English and get instant,
-                            publication-quality visualizations with AI-generated analysis. Survival curves,
-                            differential expression, mutation landscapes, and clinical stratification across
-                            199+ metadata fields &mdash; from question to chart in a single sentence.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">TCGA Data</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">33 Cancer Types</span>
-                            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Real-time</span>
-                        </div>
-                        <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
-                            Try Insight
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product portfolio grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Mouse Selector -->
-                <a href="mouse-selector.html" class="block">
-                <div class="product-card group relative rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
-                    <div class="relative">
-                        <div class="overflow-hidden border-b border-white/5">
-                            <img src="images/mouse-selector-demo.gif" alt="Mouse Selector demo — searching for tau pathology Alzheimer's models with AI-ranked JAX results" class="w-full" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-navy-500/20 to-navy-700/20 flex items-center justify-center">
-                                    <svg class="w-4.5 h-4.5 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
-                                    </svg>
-                                </div>
-                                <span class="px-2 py-0.5 rounded-full bg-navy-500/10 text-navy-400 text-[10px] font-medium">Research Tool</span>
-                            </div>
-                            <h3 class="text-lg font-semibold text-white mb-1">Mouse Selector</h3>
-                            <p class="text-navy-400 text-xs font-medium mb-3">Intelligent JAX Mouse Model Search</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                                Find the right transgenic mouse model with natural language queries.
-                                AI-powered ranking, match explanations, and proactive warnings.
-                            </p>
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-navy-500/10 text-navy-400 text-[10px]">JAX Database</span>
-                                <span class="px-2 py-0.5 rounded bg-navy-500/10 text-navy-400 text-[10px]">NLP Search</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
-
-                <!-- Spatial Advisor -->
-                <a href="spatial-advisor.html" class="block">
-                <div class="product-card group relative rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
-                    <div class="relative">
-                        <div class="overflow-hidden border-b border-white/5">
-                            <img src="images/spatial-advisor-demo.gif" alt="Spatial Advisor demo — NSCLC tumor microenvironment analysis with AI workflow guidance" class="w-full" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500/20 to-navy-500/20 flex items-center justify-center">
-                                    <svg class="w-4.5 h-4.5 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/>
-                                    </svg>
-                                </div>
-                                <span class="px-2 py-0.5 rounded-full bg-brand-500/10 text-brand-300 text-[10px] font-medium">Agentic AI</span>
-                            </div>
-                            <h3 class="text-lg font-semibold text-white mb-1">Spatial Advisor</h3>
-                            <p class="text-brand-300 text-xs font-medium mb-3">Agentic Spatial Transcriptomics</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                                An AI agent that guides spatial transcriptomics analysis &mdash; profiles data,
-                                recommends methods, executes steps, and auto-adapts. Cell-type annotation,
-                                cross-sample comparison, and ligand-receptor analysis built in.
-                            </p>
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-brand-500/10 text-brand-300 text-[10px]">Scanpy</span>
-                                <span class="px-2 py-0.5 rounded bg-brand-500/10 text-brand-300 text-[10px]">Squidpy</span>
-                                <span class="px-2 py-0.5 rounded bg-brand-500/10 text-brand-300 text-[10px]">Auto-Adaptive</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
-
-                <!-- AI Radar -->
-                <a href="ai-radar.html" class="block">
-                <div class="product-card group relative rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
-                    <div class="relative">
-                        <div class="overflow-hidden border-b border-white/5">
-                            <img src="images/ai-radar-demo.png" alt="AI Radar — continuous agentic competitive landscape analysis with AI-scored findings" class="w-full" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-navy-500/20 to-brand-500/20 flex items-center justify-center">
-                                    <svg class="w-4.5 h-4.5 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
-                                    </svg>
-                                </div>
-                                <span class="px-2 py-0.5 rounded-full bg-navy-500/10 text-navy-300 text-[10px] font-medium">Intelligence</span>
-                            </div>
-                            <h3 class="text-lg font-semibold text-white mb-1">AI Radar</h3>
-                            <p class="text-navy-300 text-xs font-medium mb-3">Competitive Intelligence Automation</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                                Automated landscape scanner monitoring 7 sources with AI-scored findings
-                                and weekly strategic analysis of competitors and market signals.
-                            </p>
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-navy-500/10 text-navy-300 text-[10px]">7 Sources</span>
-                                <span class="px-2 py-0.5 rounded bg-navy-500/10 text-navy-300 text-[10px]">Auto-Scoring</span>
-                                <span class="px-2 py-0.5 rounded bg-navy-500/10 text-navy-300 text-[10px]">Strategic</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
-
-                <!-- BioVenture -->
-                <a href="bioventure.html" class="block">
-                <div class="product-card group relative rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
-                    <div class="relative">
-                        <div class="overflow-hidden border-b border-white/5">
-                            <img src="images/bioventure-demo.gif" alt="BioVenture — AI-powered biotech deal pipeline with multi-agent due diligence scoring" class="w-full" loading="lazy">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500/20 to-brand-500/20 flex items-center justify-center">
-                                    <svg class="w-4.5 h-4.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
-                                    </svg>
-                                </div>
-                                <span class="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-medium">Agentic AI</span>
-                            </div>
-                            <h3 class="text-lg font-semibold text-white mb-1">BioVenture</h3>
-                            <p class="text-amber-400 text-xs font-medium mb-3">AI Deal Pipeline &amp; Due Diligence</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                                Multi-agent due diligence for biotech deals. AI agents score clinical risk,
-                                market opportunity, target validation, and comparable transactions in parallel.
-                            </p>
-                            <div class="flex flex-wrap gap-1.5">
-                                <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[10px]">Multi-Agent</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[10px]">Deal Scoring</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[10px]">Diligence</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- Deployment Models Section -->
-    <section id="deployment" class="py-20 lg:py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
-                    Deployment Options
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Your Data, <span class="gradient-text">Your Infrastructure</span>
-                </h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    Deploy in the cloud or on your own hardware. Every product supports on-premise installation.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <!-- Academic -->
-                <div class="p-6 rounded-2xl bg-navy-900/50 border border-white/5 text-center">
-                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-white font-semibold mb-2">Academic</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Available to researchers at academic institutions and non-profits.</p>
-                </div>
-                <!-- SaaS -->
-                <div class="p-6 rounded-2xl bg-navy-900/50 border border-brand-500/20 text-center relative">
-                    <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-white font-semibold mb-2">Hosted SaaS</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Managed cloud deployment. We handle infrastructure so you can focus on science.</p>
-                </div>
-                <!-- Enterprise -->
-                <div class="p-6 rounded-2xl bg-navy-900/50 border border-white/5 text-center">
-                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-white font-semibold mb-2">Enterprise / On-Prem</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Air-gapped deployment on your hardware. SBIR and federal contract ready.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-24 lg:py-32 relative overflow-hidden">
-        <!-- Subtle background texture for visual variety -->
-        <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
-                    Our Team
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                    Built by <span class="gradient-text">Scientists &amp; Engineers</span>
-                </h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    Our founding team brings together deep biomedical research, agentic AI development,
-                    military-grade discipline, and strategic business execution.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Alex -->
-                <div class="group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
-                    <div class="flex flex-col items-center text-center">
-                        <img src="images/alex-nesta.jpg" alt="Alex Nesta, PhD" class="w-28 h-28 rounded-full object-cover mb-6 ring-2 ring-brand-500/10 group-hover:ring-brand-500/30 transition-all">
-
-                        <h3 class="text-xl font-semibold text-white mb-1">Alex Nesta, PhD</h3>
-                        <p class="text-brand-400 text-sm font-medium mb-4">Co-Founder & Chief Technology Officer</p>
-
-                        <p class="text-gray-400 text-base leading-relaxed mb-6">
-                            Geneticist and data scientist with a PhD from UConn Health specializing in
-                            cancer genomics and RNA biology. Six years of research at UConn and The Jackson
-                            Laboratory for Genomic Medicine, followed by 3.5 years as a bioinformatics
-                            consultant serving pharma, biotech, and academic labs. Now channeling a decade
-                            of bench and industry experience into agentic AI systems that make complex
-                            genomic analysis accessible to every researcher.
-                        </p>
-
-                        <div class="flex flex-wrap justify-center gap-2 mb-6">
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Agentic AI</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Cancer Genomics</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Long-read RNA-seq</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Spatial Omics</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Biomarker ID</span>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <a href="https://www.linkedin.com/in/alex-v-nesta-phd-847547a5/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="LinkedIn">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </a>
-                            <a href="https://github.com/alexvnesta" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="GitHub">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=lY6GlyoAAAAJ&hl=en" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="Google Scholar">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-                            </a>
-                            <a href="mailto:alex@orchestrated.bio" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="Email">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Noel -->
-                <div class="group relative p-8 rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 transition-all">
-                    <div class="flex flex-col items-center text-center">
-                        <img src="images/noel-cruz.jpg" alt="Noel Cruz" class="w-28 h-28 rounded-full object-cover mb-6 ring-2 ring-navy-500/10 group-hover:ring-brand-500/30 transition-all">
-
-                        <h3 class="text-xl font-semibold text-white mb-1">Noel Cruz</h3>
-                        <p class="text-brand-400 text-sm font-medium mb-4">Co-Founder & Chief Operating Officer</p>
-
-                        <p class="text-gray-400 text-base leading-relaxed mb-6">
-                            Decorated U.S. Coast Guard veteran and software engineer with Stanford ML certification.
-                            Former roles at Activision Blizzard, L3Harris Technologies, and Microsoft. Deep network
-                            across the defense contracting ecosystem with colleagues at major primes and government
-                            agencies. Combines military leadership, technical depth, and business acumen to drive
-                            operational excellence &mdash; from biomedical AI to government-grade agentic solutions.
-                        </p>
-
-                        <div class="flex flex-wrap justify-center gap-2 mb-6">
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Project Management</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Software Engineering</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Machine Learning</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Military Leadership</span>
-                            <span class="px-2.5 py-1 rounded-md bg-navy-800 text-gray-300 text-xs">Gov/Defense Contracting</span>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <a href="https://www.linkedin.com/in/noeljcruz/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="LinkedIn">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </a>
-                            <a href="https://github.com/noeljcruz" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="GitHub">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                            <a href="https://noeljcruz.com/" target="_blank" rel="noopener" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="Personal Website">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-                            </a>
-                            <a href="mailto:noel@orchestrated.bio" class="p-2 rounded-lg bg-navy-800 hover:bg-navy-700 text-gray-400 hover:text-brand-400 transition-all" aria-label="Email">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CTA Section -->
-    <section class="py-20 lg:py-24 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="p-10 sm:p-14 rounded-2xl bg-gradient-to-br from-brand-900/40 to-navy-900/60 border border-brand-500/10">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-                    Ready to Automate Your Workflows?
-                </h2>
-                <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-                    Tell us about your use case. We'll show you how agentic AI can replace
-                    weeks of manual analysis with minutes of autonomous execution.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1zXkryIo09b7p3OrRx7kTlrM7Nib1obeyZUdG-al77HgkyLUkQ4dlPA5TeMJHwPkFRNELMfcDX?gv=true" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                <div class="flex flex-wrap gap-4">
+                    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
                         Schedule a Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 hover:border-brand-500/30 text-gray-300 hover:text-white font-medium transition-all">
+                        Explore Our Portfolio
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
-                    <a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-white/10 hover:border-brand-500/30 text-white font-medium transition-all hover:bg-white/5">
+                </div>
+
+                <!-- Stats bar -->
+                <div class="flex flex-wrap gap-8 pt-4">
+                    <div>
+                        <div class="text-2xl font-bold text-white">5</div>
+                        <div class="text-xs text-gray-500 mt-1">AI Products Built</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div>
+                        <div class="text-sm font-medium text-brand-400 mt-1">Patent Pending</div>
+                        <div class="text-xs text-gray-500 mt-1">Core Technology</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero visual: product screenshot -->
+            <div class="hidden lg:flex items-center justify-center relative">
+                <div class="relative" style="perspective: 1000px;">
+                    <div class="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-brand-500/10" style="transform: rotateY(-6deg) rotateX(2deg);">
+                        <img src="{{ '/images/insight-demo.gif' | relative_url }}" alt="Insight cancer genomics platform, conversational AI demo with streaming results" class="w-full" loading="eager">
+                    </div>
+                    <!-- Glow behind -->
+                    <div class="absolute -inset-8 bg-gradient-to-br from-brand-500/10 via-brand-400/5 to-navy-600/10 rounded-3xl blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Products Section -->
+<section id="products" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                Our Portfolio
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                From Research to <span class="gradient-text">Deployed Solutions</span>
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                We build agentic AI that accelerates research workflows and enables novel data analysis
+                while keeping scientists in control, from biomedical research to government intelligence.
+            </p>
+        </div>
+
+        <!-- Lead offering: Custom Solutions -->
+        <div class="mb-8 p-8 rounded-2xl bg-gradient-to-br from-brand-900/30 to-navy-900/50 border border-brand-500/10">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium mb-4">
+                        Custom Agentic AI Solutions
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">AI That Accelerates Your Workflows, Not Replaces Them</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Your scientists are the experts. We build AI systems that automate the
+                        cumbersome parts: data wrangling, repetitive analysis, and literature
+                        synthesis, so your team can focus on the science that matters.
+                        We also develop novel analytical approaches that weren&rsquo;t possible before,
+                        unlocking new ways to interrogate complex biomedical data.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Biomedical R&amp;D</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Defense &amp; Intelligence</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Government</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Pharma</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">On-Prem / Air-Gapped</span>
+                    </div>
+                    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
+                        Discuss Your Use Case
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
+                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Accelerate, don&rsquo;t replace</p>
+                                <p class="text-gray-500 text-xs">Automate the tedious parts, keep humans in control</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
+                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Novel analytical methods</p>
+                                <p class="text-gray-500 text-xs">New approaches to complex biomedical data</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-navy-900/50 border border-white/5">
+                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Your data, your infrastructure</p>
+                                <p class="text-gray-500 text-xs">Cloud, on-prem, or air-gapped deployment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flagship: Insight full-width hero card -->
+        <div class="product-card group relative mb-6 rounded-2xl bg-navy-900/50 border border-brand-500/10 hover:border-brand-500/25 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-500/[0.03] to-transparent"></div>
+            <div class="relative">
+                <div class="p-8 lg:p-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-700/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+                            </svg>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-medium">Flagship &middot; Patent Pending</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Insight&trade;</h3>
+                    <p class="text-brand-400 text-sm font-medium mb-4">Conversational Cancer Genomics Intelligence</p>
+                    <p class="text-gray-400 text-base leading-relaxed mb-6">
+                        Ask questions about TCGA cancer data in plain English and get instant,
+                        publication-quality visualizations with AI-generated analysis. Survival curves,
+                        differential expression, mutation landscapes, and clinical stratification across
+                        199+ metadata fields. From question to chart in a single sentence.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">TCGA Data</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">33 Cancer Types</span>
+                        <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs">Real-time</span>
+                    </div>
+                    <a href="{{ site.insight_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-600/20">
                         Try Insight
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
                         </svg>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-white/5 bg-navy-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Brand -->
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo-icon.png" alt="Orchestrated Biosciences" class="w-8 h-8 rounded-lg">
-                        <span class="text-lg font-semibold text-white">
-                            Orchestrated<span class="text-brand-400">.bio</span>
-                        </span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
-                        Agentic AI for precision medicine, biomedical research, and government missions.
-                        Built by scientists and veterans.
-                    </p>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#products" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Portfolio</a></li>
-                        <li><a href="#deployment" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Deployment</a></li>
-                        <li><a href="#team" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Team</a></li>
-                        <li><a href="https://insight.orchestrated.bio" target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-brand-400 transition-colors">Insight&trade;</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="mailto:support@orchestrated.bio" class="text-sm text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                                support@orchestrated.bio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/orchestrated-bio" target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-brand-400 transition-colors flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                GitHub
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-white/5 mt-10 pt-8">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
-                    <p class="text-xs text-gray-600">&copy; 2025&ndash;2026 Orchestrated Biosciences&reg;. All rights reserved.</p>
-                    <div class="flex gap-6">
-                        <a href="privacy-policy.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Privacy Policy</a>
-                        <a href="terms.html" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Terms of Service</a>
-                    </div>
-                </div>
-                <p class="text-xs text-gray-700 text-center">
-                    Orchestrated Biosciences&reg; is a registered trademark. Insight&trade; is patent pending.
-                    All product names and logos are trademarks or registered trademarks of their respective owners.
-                </p>
-            </div>
+        <!-- Product portfolio grid (data-driven) -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {% for product in site.data.products %}
+            {% include product-card.html product=product %}
+            {% endfor %}
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+
+
+<!-- Team Section -->
+<section id="team" class="py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-400 text-xs font-medium mb-6">
+                Our Team
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Built by <span class="gradient-text">Scientists &amp; Engineers</span>
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                Our founding team brings together deep biomedical research, agentic AI development,
+                military-grade discipline, and strategic business execution.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {% for member in site.data.team %}
+            {% include team-card.html member=member %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
