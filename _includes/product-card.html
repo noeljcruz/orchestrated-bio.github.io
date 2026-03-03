@@ -5,7 +5,7 @@
 {% assign p = include.product %}
 {% assign color = p.category_color | default: "brand" %}
 
-<a href="{{ '/products/' | append: p.slug | append: '.html' | relative_url }}" class="block">
+<a href="{{ '/products/' | append: p.slug | append: '/' | relative_url }}" class="block">
 <div class="product-card group relative rounded-2xl bg-navy-900/50 border border-white/5 hover:border-brand-500/20 overflow-hidden">
     <div class="relative">
         <div class="overflow-hidden border-b border-white/5">

@@ -16,13 +16,13 @@ footer:
         url: "https://insight.orchestrated.bio"
         external: true
       - title: Mouse Selector
-        url: /products/mouse-selector.html
+        url: /products/mouse-selector/
       - title: Spatial Advisor
-        url: /products/spatial-advisor.html
+        url: /products/spatial-advisor/
       - title: AI Radar
-        url: /products/ai-radar.html
+        url: /products/ai-radar/
       - title: BioVenture
-        url: /products/bioventure.html
+        url: /products/bioventure/
 
   resources:
     title: Resources
